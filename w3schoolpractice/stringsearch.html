@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Javascript String Methods</h2>
+        <p>The indexof() method returns the position of the first occurence of a specified text:</p>
+
+        <p id="demo"></p>
+
+        <p>The lastindexOf() method returns the position of the last occurence of a specified text:</p>
+        <p id="demo1"></p>
+        
+        <p>The search() method returns the position of the firt occurence of a specified text in a string:</p>
+        <p id = "demo2"></p>
+
+        <p>Search a string for "ain":</p>
+        <p id="demo3"></p>
+
+        <p>Check if a string include "world":</p>
+        <p id ="demo4"></p>
+        <p id="demo5"></p>
+        <p>The includes() method is not supported in Internet Explorer.</p>
+
+        <p>Check if a string starts with "Hello":</p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p>The startsWith() method is not supported in Internet Explorer.</p> 
+        
+        <p>Check if a string ends with "Doe":</p>
+        <p id="demo8"></p>
+        <p>The endsWith() method is not supported in Internet Explorer.</p>
+
+        <p>Check in the 11 first characters of a string ends with "world":</p>
+        <p id="demo9"></p>
+        <p>The endsWith() method is not supported in Internet Explorer.</p>
+
+
+
+
+        <script>
+            let str="Please locate where 'locate' occurs!";
+            let text="The rain in SPAIN stays mainly in the plain";
+            let text1="Hello world,welcome to the universe.";
+            let text2="John Doe";
+            document.getElementById("demo").innerHTML=str.indexOf("locate",15);
+            document.getElementById("demo1").innerHTML=str.lastIndexOf("locate",15);
+            document.getElementById("demo2").innerHTML=str.search("locate");
+            document.getElementById("demo3").innerHTML=text.match(/ain/gi);
+            document.getElementById("demo4").innerHTML=text1.includes("world");
+            document.getElementById("demo5").innerHTML=text1.includes("world",12);
+            document.getElementById("demo6").innerHTML=text1.startsWith("Hello");
+            document.getElementById("demo7").innerHTML=text1.startsWith("world",5   );
+            document.getElementById("demo8").innerHTML=text2.endsWith("Doe");   
+            document.getElementById("demo9").innerHTML=text1.endsWith("world",11);
+        
+        </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>

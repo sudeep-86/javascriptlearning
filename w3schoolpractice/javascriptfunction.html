@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Functions</h2>
+        <p>This example calls a function which performs a calculation, and returns the result:</p>
+        <p id="demo"></p>
+        <p id="degree"></p>
+        <script>
+            function toCelsius(fahrenheit){
+                return (5/9) *(fahrenheit-32);
+            }
+            function myFunction(p1,p2){
+                return p1*p2;
+            }
+
+            document.getElementById("demo").innerHTML=myFunction(5,3);
+            document.getElementById("degree").innerHTML="The temperature is "+ toCelsius(98.4)+" Celsius";
+        </script>
+    
+    </body>
+</html>

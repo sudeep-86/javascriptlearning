@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>javascript String Methods</h2>
+        <p>Display the first array element, after a string split:</p>
+
+        <p id="demo"></p>
+
+        <p>using String.split();</p>
+        <p id="demo1"></p>
+        <script>
+            let text="a,b,c,d,e,f";
+            const myArray=text.split(",");
+            document.getElementById("demo").innerHTML=myArray[0];
+            
+            
+            let text1="Hello";
+            const myArr=text1.split("");
+
+            text1="";
+            for(let i=0;i<myArr.length;i++)  {
+                text1 +=myArr[i]+"<br>";
+            }
+            document.getElementById("demo1").innerHTML=text1;
+        
+        </script>
+    </body>
+</html>

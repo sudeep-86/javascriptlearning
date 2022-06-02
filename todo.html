@@ -1,0 +1,69 @@
+<html>
+    <head>
+    <title>My title</title>
+    
+    </head>
+    <body>
+        <div>Sudeep
+        </div>
+        <input id="todo-title" type="text"/>
+        <button onclick="addTodo()"> Add Todo</button>
+        <button>Click me</button>
+        <script>
+         //   document.title='Hello World';
+         //   document.getElementById("demo").innerHTML=document.title;
+            let todo1='Get groceries';
+            let todo2='Wash car';
+            let todo3='Make dinner';
+            let todo4=99;
+            let month='November';
+            let dayOfMonth=9;
+            let year=2021;
+            let cal1=4+5*3;
+            let cal2=(4+5)*3;
+            let age=36;
+            let message='I am '+age+' years old';
+            let todos=['Get groceries','Wash car','Make dinner','Do Laundry'];
+            
+  todos.forEach(function(todoTitle){
+    let element=document.createElement('div');
+                element.innerText=todoTitle;
+                document.body.appendChild(element);
+  })
+
+  render();
+
+  function addTodo(){
+    let textbox=document.getElementById('todo-title');
+
+//    let textbox=document.getElementbyId('todo-title');
+    let title=textbox.value;
+
+    todos.push(title);
+    render();
+
+  }
+  function render(){
+      //reset our list
+  todos.forEach(function(todoTitle){
+    let element=document.createElement('div');
+                element.innerText=todoTitle;
+                document.body.appendChild(element);
+  })
+}
+
+/*            function addTodo(todoTitle){
+                let element=document.createElement('div');
+                element.innerText=todoTitle;
+                document.body.appendChild(element);
+            }  
+           console.log('hello'.toUpperCase());*/ 
+            // addTodo(todo1);
+            // addTodo(todo2);
+            // addTodo(todo3);
+
+        </script>
+        <button>Up</button>
+        <button>Down</button>
+    </body>
+</html>

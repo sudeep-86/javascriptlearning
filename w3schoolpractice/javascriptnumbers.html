@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Numbers</h2>
+
+        <p>You can use the global JavaScript function isNaN() to find out if a value is not a number:</p>
+        <p id="demo"></p>
+
+        <p>If you use NaN in a mathematical operation, the result will also be NaN:</p>
+        <p id="demo1"></p>
+
+        <p> Infinity is returned if you calculate a number outside the largest possibe number:</p>
+        <p id="demo3"></p>
+
+        <p>Division by zero generates Infinity;</p>
+        <p id="demo4"></p>
+
+        <p>JavaScript objects cannot be compared:</p>
+        <p id="demo5"></p>
+        <p>====</p>
+        <p id="demo6"></p>
+
+
+        <script>
+            let x=100/"Apple";
+            document.getElementById("demo").innerHTML=isNaN(x);
+        
+            let x1=NaN;
+            let y =5;
+            document.getElementById("demo1").innerHTML=x1+y;
+        
+            let myNumber=2;
+            let txt="";
+            while(myNumber != Infinity){
+                myNumber=myNumber*myNumber;
+                txt=txt+myNumber+"<br>";
+            }
+            document.getElementById("demo3").innerHTML=txt;
+
+            let x2=2/0;
+            let y1=-2/0;
+            document.getElementById("demo4").innerHTML=x2+"<br>"+y1;
+        
+            let x4=new Number(500);
+            let y4= new Number(500);
+            document.getElementById("demo5").innerHTML=(x==y);
+            document.getElementById("demo6").innerHTML=(x===y);
+
+        </script>
+    
+    
+    
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="myH"></h1>
+        <p id="myP"></p>
+        <p id="demo"></p>
+        <h2>JavaScript Hoisting</h2>
+        <p>With <b>let</b>, you cannot use a variable before it is declared</p>
+        <p id="demo1"></p>
+        <button onclick="window.print()">Print this page</button>
+        
+        <script>
+            try{
+                carName="Saab";
+                let carName="Volvo";
+            }
+            catch(err){
+                document.getElementById("demo1").innerHTML=err;
+            }
+            let carName="Volvo";
+            document.getElementById("demo").innerHTML=carName;
+            document.getElementById("myH").innerHTML="JavaScript Comments";
+            document.getElementById("myP").innerHTML="My First Paragraph.";
+        </script>
+    
+    
+    </body>
+</html>

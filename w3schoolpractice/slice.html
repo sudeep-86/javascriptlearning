@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript String Methods</h2>
+        <p>The slice() method extract a part of a String
+            and returns the extracted parts in a new string:
+        </p>
+        <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo1">Please visit Microsoft and Microsoft!</p>
+       
+        <p id="demo"></p>
+        <script>
+            let str="Apple,Banana,Kiwi";
+            document.getElementById("demo").innerHTML=str.slice(-12);
+        
+            function myFunction(){
+                let text = document.getElementById("demo1").innerHTML;
+//                document.getElementById("demo1").innerHTML=text.replace("Microsoft","W3School");// replaces only first match
+//                document.getElementById("demo1").innerHTML=text.replace(/MICROSOFT/i,"W3Schools");// --/MICROSOFT/i ---Makes it case insensitive    
+                document.getElementById("demo1").innerHTML=text.replace(/Microsoft/g,"W3Schools");//--/Microsoft/g---replaces all the matches
+            }
+        
+        </script>
+    </body>
+</html>
