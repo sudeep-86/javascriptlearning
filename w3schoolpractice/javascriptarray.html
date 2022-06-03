@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Arrays</h2>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+
+        <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+        <p id="demo2"></p>
+
+        <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+        <p id="demo3"></p>
+
+        <p>Arrays use numbers to access its elements.</p>
+        <p id="demo4"></p>
+
+        <p>JavaScript uses names to access object properties.</p>
+        <p id="demo5"></p>
+
+        <p>The length property returns the length of an array.</p>
+        <p id="demo6"></p>
+
+        <p>JavaScript array elements are accesses using numeric indexes (starting from 0).</p>
+        <p id="demo7"></p>
+
+
+        <script>
+            const cars=["Saab","Volvo","BMW"];
+            document.getElementById("demo").innerHTML=cars;
+   
+            const cars1= new Array("Saab","Volvo","BMW");
+            document.getElementById("demo1").innerHTML=cars1;
+
+            document.getElementById("demo2").innerHTML=cars[0];
+
+            cars[1]="Opel";
+            document.getElementById("demo3").innerHTML=cars;
+
+            const person=["John","Doe",46];
+            document.getElementById("demo4").innerHTML=person[0];
+
+            const person1={firstName:"John",lastName:"Joe",age:46};
+            document.getElementById("demo5").innerHTML=person1.firstName;
+
+            const fruits=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo6").innerHTML=fruits.length;
+
+            document.getElementById("demo7").innerHTML=fruits[fruits.length-1];
+
+
+        </script>
+
+
+    </body>
+</html>
