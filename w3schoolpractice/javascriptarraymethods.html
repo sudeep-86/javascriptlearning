@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Array Methods</h2>
+        <h2>toString()</h2>
+        <p>The toString() method returns an array as a comma separatedstring:</p>
+        <p id="demo"></p>
+
+        <h2>join()</h2>
+        <p>The join() method join array elements into a string.</p>
+        <p>In this example we have used "*" as a separator between the elements:</p>
+        <p id="demo1"></p>
+
+        <h2>pop()</h2>
+        <p>The pop() method removes the last element from an array.</p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+
+
+        <h2>push()</h2>
+        <p>The push() method appends a new element to an array:</p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+
+        <p>The push() method returns the new array length:</p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+
+        <h2>shift()</h2>
+        <p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+        <p id="demo9"></p>
+        <p id="demo10"></p>
+
+        <p>The shift() method returns the element that was shifted out.</p>
+        <p id="demo11"></p>
+        <p id="demo12"></p>
+
+        <h2>unshift()</h2>
+        <p>The unshift() method adds new elements to the beginning of an array:/p>
+        <p id="demo13"></p>
+        <p id="demo14"></p>
+
+        <p>The unshift() method returns the length of the new array:</p>
+        <p id="demo15"></p>
+        <p id="demo16"></p>
+
+        <p>Array elements are accessed using their index number:</p>
+        <p id="demo17"></p>
+        <p id="demo18"></p>
+
+        <p>The length property provides an easy way to append new elements to an array without using the push() method:</p>
+        <p id="demo19"></p>
+        <p id="demo20"></p>
+
+        <h2>concat()</h2>
+        <p>The concat() method merges (concatenates) arrays:</p>
+        <p id="demo21"></p>
+
+        <p id="demo22"></p>
+
+        <p>The concat() method can merge string values to arrays:</p>
+        <p id="demo23"></p>
+
+        <h2>splice()</h2>
+        <p>The splice() method adds new elements to an array:</p>
+        <p id="demo24"></p>
+        <p id="demo25"></p>
+
+        <p>The slice() method adds new elements to an array, and returns an array with deleted elements (if any):</p>
+        <p id="demo26"></p>
+        <p id="demo27"></p>
+        <p id="demo28"></p>
+
+        <p>The splice() methods can be ued to remove array elements:</p>
+        <p id="demo29"></p>
+        <p id="demo30"></p>
+
+        <h2>slice()</h2>
+        <p>This example slices out a part of an array starting from array element 1 ("Orange"):</p>
+        <p id="demo31"></p>
+
+        <p>This example slices out a part of an array starting rfom array element 3 ("Apple")</p>
+        <p id="demo32"></p>
+
+        <p>When the slice() method is given two arguments, it selects array elements from the start argument, and up to (but not included) the end argument:</p>
+        <p id="demo33"></p>
+
+
+        <p>This example slices out a part of an aray starting from array element 2 ("Lemon"):</p>
+        <p id="demo34"></p>
+
+
+
+        <script>
+            const fruits=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo").innerHTML=fruits.toString();
+        
+            document.getElementById("demo1").innerHTML=fruits.join("*");
+            
+            document.getElementById("demo2").innerHTML=fruits;
+            document.getElementById("demo4").innerHTML=fruits.pop();
+            document.getElementById("demo3").innerHTML=fruits;
+            
+
+            const fruits1=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo5").innerHTML=fruits1;
+            fruits1.push("Kiwi");
+            document.getElementById("demo6").innerHTML=fruits1;
+        
+            document.getElementById("demo7").innerHTML=fruits1.push("Melon");
+            document.getElementById("demo8").innerHTML=fruits1;
+        
+            const fruits2=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo9").innerHTML=fruits2;
+            fruits2.shift();
+            document.getElementById("demo10").innerHTML=fruits2;
+
+            const fruits3=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo11").innerHTML=fruits3.shift();
+            document.getElementById("demo12").innerHTML=fruits3;
+
+            const fruits4=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo13").innerHTML=fruits4;
+            fruits4.unshift("Lemon");
+            document.getElementById("demo14").innerHTML=fruits4;
+
+            const fruits5=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo15").innerHTML=fruits5.unshift("Lemon");
+            document.getElementById("demo16").innerHTML=fruits5;
+
+            const fruits6=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo17").innerHTML=fruits6;
+            fruits6[0]="Kiwi";
+            document.getElementById("demo18").innerHTML=fruits6;
+
+            const fruits7=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo19").innerHTML=fruits7;
+            fruits7[fruits7.length]="Kiwi";
+            document.getElementById("demo20").innerHTML=fruits7;
+       
+            const myGirls=["Cecilie","Lone"];
+            const myBoys=["Emil","Tobias","Linus"];
+            const myChildren=myGirls.concat(myBoys);
+            document.getElementById("demo21").innerHTML=myChildren;
+       
+
+            const array1=["Cecilie","Lone"];
+            const array2=["Emil","Tobias","Linus"];
+            const array3=["Robin","Morgan"];
+            
+            const myChildren1=array1.concat(array2,array3);
+            document.getElementById("demo22").innerHTML=myChildren1;
+       
+            const myArray=["Emil","Tobias","Linus"];
+            const myChildren2=myArray.concat("Peter");
+            document.getElementById("demo23").innerHTML=myChildren2;
+       
+            const fruits8=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo24").innerHTML=fruits8;
+            fruits8.splice(2,0,"Lemon","Kiwi");
+            document.getElementById("demo25").innerHTML=fruits8;
+
+            const fruits9=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo26").innerHTML="Original Array:<br> " + fruits9;
+            let removed = fruits9.splice(2,2,"Lemon","Kiwi");
+            document.getElementById("demo27").innerHTML="New Array:<br> " +fruits9;
+            document.getElementById("demo28").innerHTML="Removed Items:<br> "+ removed;
+       
+            const fruits10=["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo29").innerHTML=fruits10;
+            fruits10.splice(0,1);
+            document.getElementById("demo30").innerHTML=fruits10;
+       
+            const fruits11=["Banana","Orange","Lemon","Apple","Mango"];
+            const citrus = fruits11.slice(1);
+            document.getElementById("demo31").innerHTML=fruits11+"<br><br>"+citrus;
+       
+            const fruits12=["Banana","Orange","Lemon","Apple","Mango"];
+            const citrus1=fruits12.slice(3);
+            document.getElementById("demo32").innerHTML=fruits12+"<br><br>"+citrus1;
+
+            const fruits13=["Banana","Orange","Lemon","Apple","Mango"];
+            const citrus2=fruits13.slice(1,3);
+            document.getElementById("demo33").innerHTML=fruits13+"<br><br>"+citrus2;
+       
+            const fruits14=["Banana","Orange","Lemon","Apple","Mango"];
+            const citrus3=fruits14.slice(2);
+            document.getElementById("demo34").innerHTML=fruits14+"<br><br>"+citrus3;
+       </script>
+    </body>
+</html>

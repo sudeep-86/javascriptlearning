@@ -23,6 +23,34 @@
         <p>JavaScript array elements are accesses using numeric indexes (starting from 0).</p>
         <p id="demo7"></p>
 
+        <p>The best way to loop through an array is using a standard for loop:</p>
+        <p id="demo8"></p>
+
+        <p>Array.forEach() calls a function for each array element</p>
+        <p id ="demo9"></p>
+
+
+        <p>The push method appends a new element to an array.</p>
+        <button onclick="myFunction2()">Try it</button>
+        <p id="demo10"></p>
+
+        <p>The length property provides an easy way to append new elements to an array without using the push() method.</p>
+        <button onclick="myFunction1()">Try it</button>
+        <p id="demo11"></p>
+
+        <p>Avoid uing new Array(). User [] instead.</p>
+        <p id="demo12"></p>
+
+        <p>Create an Array with three elements.</p>
+        <p id="demo13"></p>
+
+        <p>Create an Array with one element.Avoid using new Array().</p>
+        <p id="demo14"></p>
+
+        <p id="demo15"></p>
+        <p id="demo16"></p>
+
+
 
         <script>
             const cars=["Saab","Volvo","BMW"];
@@ -47,7 +75,54 @@
 
             document.getElementById("demo7").innerHTML=fruits[fruits.length-1];
 
+            const fruits1=["Banana","Orange","Apple","Mango"];
+            let flen=fruits1.length;
+            let text="<ul>";
+                for(let i=0;i<flen;i++){
+                    text +="<li>"+ fruits1[i]+"</li>";
+                }
+            text +="</ul>"; 
+            document.getElementById("demo8").innerHTML=text;
 
+             let text1="<ul>";
+            fruits.forEach(myFunction);
+            text1 +="</ul>"
+            document.getElementById("demo9").innerHTML=text1;
+
+            function myFunction(value){
+                text1 +="<li>"+value+"</li>"
+            }
+
+            const fruits2=["Banana","Orange","Apple"];
+            document.getElementById("demo10").innerHTML=fruits2;
+            function myFunction2(){
+                fruits2.push("Lemon");
+                document.getElementById("demo10").innerHTML=fruits2;
+            }
+
+            const fruits3=["Banana","Orange","Apple"];
+            document.getElementById("demo11").innerHTML=fruits3;
+
+            function myFunction1(){
+                fruits3[fruits3.length]="Lemon";
+                document.getElementById("demo11").innerHTML=fruits3;
+            }
+
+
+            // const points=new Array(40,100,1,5,25,10);
+            const points=[40,100,1,5,25,10];
+            document.getElementById("demo12").innerHTML=points[0];
+        
+        var points1=new Array(40,100,1);
+        document.getElementById("demo13").innerHTML=points1;
+        
+       var points2= new Array(40);
+       document.getElementById("demo14").innerHTML=points2; 
+        
+        const fruits4=["Banana","Orange","Apple"];
+        document.getElementById("demo15").innerHTML=Array.isArray(fruits4);
+       
+        document.getElementById("demo16").innerHTML=fruits4 instanceof Array;
         </script>
 
 
