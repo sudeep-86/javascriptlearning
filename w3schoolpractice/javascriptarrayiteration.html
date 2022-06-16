@@ -17,7 +17,44 @@
         <p>This example finds the sum of all numbers in an array:</p>
         <p id="demo3"></p>
 
+        <p>This example finds the sum of all numbers in an array:</p>
+        <p id="demo4"></p>
 
+        <h2>JavaScript Array.reduceRight()</h2>
+        <p>This example finds the sum of all numbers in an array</p>
+        <p id="demo5"></p>
+
+        <h2>JavaScript Array.every()</h2>
+        <p>The every() method checks if all array values pass a test.</p>
+        <p id="demo6"></p>
+
+        <h2>JavaScript Array.some()</h2>
+        <p>The some() method checks if some array values pass a test.</p>
+        <p id="demo7"></p>
+
+        <h2>JavaScript Array.indexOf()</h2>
+        <p id="demo8"></p>
+
+        <h2>JavaScript Array.find()</h2>
+        <p id="demo9"></p>
+
+        <h2>JavaScript Array.findIndex()</h2>
+        <p id="demo10"></p>
+
+        <p>The Array.from() method returns a Array object from any object with a length property or any iterable object.</p>
+        <p id="demo11"></p>
+
+        <p>The Array.keys() method returns an Array Iterator object with the keys of the array.</p>
+        <p id="demo12"></p>
+
+        <h2>The entries() method</h2>
+        <p>entries() returns an Array Iterator object with key/value pairs:</p>
+        <p id="demo13"></p>
+
+        <h1>Array includes()</h1>
+        <p>Check if the fruit array contains "Mango":</p>
+        <p id="demo14"></p>
+        <p><Strong>Note:</Strong>The includes methos is not supported in Edge 13 (and earlier versions).</p>
 
 
 
@@ -61,10 +98,82 @@
                 return total+value;
             }
 
+            const number5=[45,4,9,16,25];
+            let sum1=number5.reduce(myFunction4,100);
+            document.getElementById("demo4").innerHTML="The sum is " + sum1;
+            function myFunction4(total,value){
+                return total +value;
+            }
+        
+            const number6=[45,4,9,16,25];
+            let sum2=number6.reduceRight(myFunction5);
+            document.getElementById("demo5").innerHTML="The sum is "+sum2;
 
-</script>
-    
-    
+            function myFunction5(total,value,index,array)
+            {
+                return total+value;
+            }
+        
+            const number7=[45,4,9,16,25];
+            let allOver18=number7.every(myFunction6);
+            document.getElementById("demo6").innerHTML="All over 18 is "+ allOver18;
+
+            function myFunction6(value,index,array){
+                return value>18;
+            }
+
+            const number8=[45,4,9,16,25];
+            let someOver18=number8.some(myFunction7);
+            document.getElementById("demo7").innerHTML="Some over 18 is "+someOver18;
+
+            function myFunction7(value,index,array){
+                return value>18;
+            }
+
+            const fruits=["Apple","Orange","Apple","Mango"];
+            let position=fruits.indexOf("Apple") +1;
+
+            document.getElementById("demo8").innerHTML="Apple is found in position "+ position;
+            
+            const number9=[4,9,16,25,29];
+            let first= number9.find(myFunction8);
+            document.getElementById("demo9").innerHTML="First number over 18 is " +first;
+
+            function myFunction8(value,index,array){
+                return value>18;
+            }
+
+            document.getElementById("demo10").innerHTML="First number over 18 has index "+ number9.findIndex(myFunction9);
+            function myFunction9(value,index,array){
+                return value>18;
+            }
+
+            const myArr=Array.from("ABCDEFG");
+            document.getElementById("demo11").innerHTML=myArr;
+
+            const fruits1=["Banana","Orange","Apple","Mango"];
+            const keys=fruits.keys();
+            let text="";
+            for(let x of keys){
+                text += x+"<br>";
+            }
+            document.getElementById("demo12").innerHTML=text;
+
+            const f= fruits1.entries();
+            for(let x of f){
+                document.getElementById("demo13").innerHTML+=x+"<br>";
+            }
+
+            document.getElementById("demo14").innerHTML=fruits1.includes("Mango");     
+
+
+
+
+
+
+        </script>
+        <p>The Array.from() method is not supported in Internet Explorer.</p>
+        <p>The entries() method is not supported in Internet Explorer 11 (or earlier).</p>
 
     
     </body>
