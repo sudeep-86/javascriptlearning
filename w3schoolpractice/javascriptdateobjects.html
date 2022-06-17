@@ -8,13 +8,64 @@
         <p>Specifying a month higher than 11, will not result in an error but add the overflow to the next year: </p>
         <p id="demo1"></p>
         <p>Specifying a day higher than max, will not result in an error but add the overflow to the next month:</p>        <p id="demo2"></p>
+        <p id="demo2"></p>
+        <p>6 numbers specify year, month, day, hour, minute and second:</p>
+        <p id="demo3"></p>
+        <p>5 numbers specify year,month,day,hour, and minute:</p>
+        <p id="demo4"></p>
+
+        <p>A Date Object can be created with a specified date and time:</p>
+        <p id="demo5"></p>
+
+        <p>The toUTCString() method converts a date to a UTC string (a date display standard):</p>
+        <p id="demo6"></p>
+
+        <p>The todateString() method convert a date to a date string:</p>
+        <p id="demo7"></p>
+
+        <p>The toISOString() method converts a date to a date string, using the ISO standard format:</p>
+        <p id="demo8"></p>
+
+        <h2>JavaScript ISO Dates</h2>
+        <p id="demo9"></p>
+        <p id="demo10"></p>
+        <p id="demo11"></p>
+
+        <p>Separate date and time with a capital T.</p>
+        <p>Indicate UTC time with a capital Z.</p>
+        <p id="demo12"></p>
         
+        <p>Modify the time relatve to UTC by adding +HH:MM or subtraction -HH:MM to the time.</p>
+        <p id="demo13"></p>
+
+        <p>Date.parse() returns the number of milliseconds between the date and January 1, 1970:</p>
+        <p id="demo14"></p>
+
+        <h2>JavaScript getTime()</h2>
+        <p>The internal clock in JavaScript counts from midnight January 1,1970.</p>
+        <p>The getTime() function returns the number of milliseconds since then:</p>
+        <p id="demo15"> </p>
+
+        <h2>JavaScript getFullYear()</h2>
+        <p>The getFullYear() method returns the full year of a date:</p>
+        <p id="demo16"></p>
+        <p id="demo17"></p>
+
+        <h2>JavaScript getMonth()</h2>
+        <p>The getMonth() method returns the month as a number.</p>
+        <p>You can use an array to display the name of the month:</p>
+        <p id="demo18"></p>
         
-        
-        
-        
-        
-        
+        <h2>JavaScript setFullYear()</h2>
+        <p>The setFullYear() method sets the year of a date object:</p>
+        <p id="demo19"></p>
+
+        <h2>JavaScript setDate()</h2>
+        <p>The setDate() method can be used to add days to a date.</p>
+        <p id="demo20"></p>
+
+        <p id="demo21"></p>
+
         <script>
             const d=new Date();
             document.getElementById("demo").innerHTML=d;
@@ -25,12 +76,75 @@
             const d2=new Date(2018,05,35,10,33,30,0);
             document.getElementById("demo2").innerHTML=d2;
         
+            const d3= new Date(2018,11,24,10,33,30);
+            document.getElementById("demo3").innerHTML=d3;
+            
+            const d4= new Date(2018,11,24,10,33);
+            document.getElementById("demo4").innerHTML=d4;
         
+            const d5= new Date("October 13, 2014 11:13:00");
+            document.getElementById("demo5").innerHTML=d5;
         
-        
-        
-        
-        </script>
+            const d6=new Date();
+            document.getElementById("demo6").innerHTML=d6.toUTCString();
+
+            const d7= new Date();
+            document.getElementById("demo7").innerHTML=d7.toDateString();
+            
+            const d8= new Date();
+            document.getElementById("demo8").innerHTML=d8.toISOString();
+       
+            const d9=new Date("2015-03-25");
+            document.getElementById("demo9").innerHTML=d9;
+       
+            const d10=new Date("2015-03");
+            document.getElementById("demo10").innerHTML=d10;
+       
+            const d11= new Date("2015");
+            document.getElementById("demo11").innerHTML=d11;
+       
+            const d12=new Date("2015-03-25T12:00:00Z");
+            document.getElementById("demo12").innerHTML=d12;
+       
+            document.getElementById("demo13").innerHTML= new Date("2015-03-25T12:00:00+06:00");
+
+            const msec=Date.parse("March 21, 2012");
+            document.getElementById("demo14").innerHTML=msec;
+       
+            const d15= new Date();
+            document.getElementById("demo15").innerHTML=d15.getTime();
+       
+            const d16= new Date();
+            document.getElementById("demo16").innerHTML=d16.getFullYear();
+            document.getElementById("demo17").innerHTML=d16.getMonth();
+       
+            const months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+            const d18=new Date()
+           
+            let month= months[d18.getMonth()];
+            document.getElementById("demo18").innerHTML=month;
+
+            const d19= new Date();
+            d19.setFullYear(2020);
+            document.getElementById("demo19").innerHTML=d19;
+            
+            const d20= new Date();
+            d20.setDate(d.getDate() + 50);
+            document.getElementById("demo20").innerHTML=d20;
+       
+            let text;
+            const today = new Date();
+            const someday= new Date();
+            someday.setFullYear(2100,0,14);
+
+            if(someday>today){
+                text="Today is before January 14, 2100.";
+            } else {
+                text="Today is after January 14, 2100.";
+            }
+            document.getElementById("demo21").innerHTML=text;
+       
+       </script>
     </body>
 
 </html>
